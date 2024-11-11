@@ -8,10 +8,8 @@ class Solution:
             dfs(x - 1, y)
             dfs(x, y + 1)
             dfs(x, y - 1)
-
         if not grid:
             return 0
-
         num_islands = 0
 
         for i in range(len(grid)):
