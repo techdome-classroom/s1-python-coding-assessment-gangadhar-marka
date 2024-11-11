@@ -17,5 +17,4 @@ class Solution:
                 if grid[i][j] == 'L':
                     dfs(i, j)
                     num_islands += 1
-
         return num_islands
