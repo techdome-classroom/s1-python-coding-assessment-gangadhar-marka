@@ -1,5 +1,6 @@
 class Solution:
     def getTotalIsles(self, grid: list[list[str]]) -> int:
+        
         def dfs(x, y):
             if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] != 'L':
                 return
