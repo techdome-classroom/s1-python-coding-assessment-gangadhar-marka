@@ -1,6 +1,7 @@
 import re
 
 def decode_message(s: str, p: str) -> bool:
-    pattern = p.replace('?', '.').replace('*', '.*')
+    pattern = re.sub(r'\?', '.', p)
+    pattern = re.sub(r'\*', '.*', pattern)
     pattern = f"^{pattern}$"
-    return bool(re.match(pattern, s))
+    return bool(re.fullmatch(pattern, s))
